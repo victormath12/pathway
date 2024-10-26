@@ -22,9 +22,11 @@ export declare namespace IOnboarding {
     status: "active" | "inactive";
     enroll_availability_start_date: Date; // formato ISO 8601 (ex: 2024-11-01T00:00:00.000Z)
     managers: {
-      id: string;
-      name: string;
-      thumbnail_url: string;
+      users?: {
+        id?: string;
+        name?: string;
+        thumbnail_url?: string;
+      }[]
     }[];
     total_members: number;
     subscription: {

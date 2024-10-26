@@ -1,22 +1,13 @@
-"use client"
-import { ReactNode } from "react"
-import { useEffect, useState } from "react"
 import Image from "next/image"
-import { Transition } from 'react-transition-group';
+import { ReactNode } from "react"
 
 export default function ResultLayout({
   children,
 }: {
   children: ReactNode
 }) {
-  const [loading, setLoading] = useState<boolean>(true)
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 0)
-  }, [])
-
   return (
-    <div className="flex flex-col h-full bg-background">
+    <div className="flex flex-col h-full">
       <div className="flex justify-center px-6 py-4 bg-background">
         <div className="flex gap-x-1 pt-4">
           <Image
@@ -27,7 +18,7 @@ export default function ResultLayout({
           />
         </div>
       </div>
-      {!loading && <div className="w-screen h-screen bg-background">{children}</div>}
+      <div className="w-screen h-screen bg-background">{children}</div>
     </div>
   )
 }

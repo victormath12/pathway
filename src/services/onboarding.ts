@@ -42,3 +42,22 @@ export const getLifeMomentsPaths = async (args: {
   }
 }
 
+
+export const getPathDetail = async (args: {
+  lifeMomentId: string
+}): Promise<IOnboarding.Path[]> => {
+  try {
+    const response = await api.get("/pathways-context/pathways", {
+    })
+
+    console.log(response.data.datasets)
+
+    if (response.status === 200 && response.data.datasets.length > 0) {
+      return response.data.datasets
+    }
+
+    return []
+  } catch (error) {
+    return []
+  }
+}

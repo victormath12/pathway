@@ -79,7 +79,7 @@ export function CardPath(
         </div>
         {args?.path?.status === "active" &&
           <Link
-            href={`/path/${args?.path?.id}`}
+            href=""
             className="flex items-center border rounded-sm justify-center h-[46px] bg-primary text-white gap-x-2"
           >
             Join this path <ArrowRight className="size-5" />
