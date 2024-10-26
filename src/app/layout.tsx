@@ -8,7 +8,7 @@ import { Providers } from "./providers"
 
 const metadata: Metadata = {
   title: "Psi do Futuro",
-  description: "Psi do Futuro - Plataforma de agendamento de consultas online",
+  description: "Pathway",
 }
 
 export default function RootLayout({
@@ -26,11 +26,6 @@ export default function RootLayout({
       >
         <Providers>{children}</Providers>
         <Toaster richColors position="top-right" />
-        {process.env.NODE_ENV === "production" && (
-          <GoogleAnalytics
-            gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string}
-          />
-        )}
       </body>
     </html>
   )
