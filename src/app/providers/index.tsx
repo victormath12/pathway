@@ -1,8 +1,10 @@
 "use client"
-import { ReactNode } from "react"
 
-export const Providers = ({ children }: { children: ReactNode }) => {
+export const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-    { children }
-  )
-}
+    <>
+      {/* Adicione aqui os provedores necessários */}
+      {children}
+    </>
+  );
+};
